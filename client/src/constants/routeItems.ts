@@ -1,0 +1,72 @@
+// **라우트랑 텍스트는 구분해서 관리.
+export const Routes = {
+  home: `/`,
+
+  getWorship: `http://localhost:80/api/admin/worship-management`,
+  postWorship: `http://localhost:80/api/admin/worship-apply`,
+  worshipCancel: `http://localhost:80/api/admin/worship-result/cancel`,
+  worshipApply: `/worship-apply`,
+  worshipResult: `/worship-result`,
+  onlineWorship: `/online-worship`,
+  worshipGuide: `/worship-guide`,
+  userSubtract: `http://localhost:80/api/admin/worship-result/subtract`,
+
+  quietTime: `/quiet-time`,
+  login: `/login`,
+  signUp: `/sign-up`,
+  prayRequest: `/pray-request`,
+  prayRequestDetail: `/pray-request/:id`,
+  graceSharing: "/grace-sharing",
+  graceSharingWrite: "/grace-sharing/write",
+  graceSharingDetail: "/grace-sharing/:id",
+  graceSharingDelete: "/api/users/grace-sharing/delete",
+  graceImageSave: "/api/users/grace-sharing/write/image-save",
+  logout: "/logout",
+  myPage: "/my-page",
+  thanksLetter: "/thanks-letter",
+  thanksLetterWrite: "/thanks-letter/write",
+  thanksLetterDetail: "/thanks-letter/:id",
+  thanksLetterEdit: "/thanks-letter/edit/:id",
+  proclamation: "/proclamation",
+  newFamily: "/new-family",
+  newFamilyDetail: "/new-family/:id",
+  notificationDetail: "/notification/:id",
+};
+
+export const RoutesText = {
+  homeText: "홈",
+  worshipApplyText: "예배신청",
+  worshipResultText: "신청현황 / 취소",
+  onlineWorshipText: "온라인 예배",
+  worshipGuideText: "예배안내",
+  quietTimeText: "큐티하기",
+  loginText: "로그인",
+  signUpText: "회원가입",
+  prayRequestText: "기도요청",
+  graceSharingText: "은혜공유",
+  logoutText: "로그아웃",
+  myPageText: "내정보",
+  thanksLetterText: "감사편지",
+  proclamationText: "말씀선포",
+  newFamilyText: "새가족 소개",
+};
+
+export const RoutesIcon = {
+  worshipApplyIcon: "👑",
+  worshipResultIcon: "📌",
+  newFamilyIcon: "🎉",
+  onlineWorshipIcon: "👩🏼‍💻",
+  quietTimeIcon: "🔥",
+  prayRequestIcon: "🙏🏻",
+  thanksLetterIcon: "💌",
+  graceSharingIcon: "🧡",
+  proclamationIcon: "🥇",
+  worshipGuideIcon: "💎",
+};
+
+export const RoutesImgUrl = {
+  prayerRequestImg: "img/subNav/prayingHands.png",
+  thanksLetterImg: "img/subNav/letter.png",
+  proclamationImg: "img/subNav/speak.png",
+  graceSharingImg: "img/subNav/share.png",
+};

@@ -1,0 +1,218 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.spinner {
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+.spinner:after {
+  content: " ";
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 3px solid lightgray;
+  border-color: lightgray transparent lightgray transparent;
+  animation: spinner 1500ms linear infinite;
+}
+
+.full-screen {
+  width: 100%;
+  height: calc(100vh - 107px);
+  overflow: hidden;
+}
+
+.overflow-screen {
+  width: 100%;
+  height: calc(100vh);
+}
+
+/* 네비 호버시 컬러 변경.*/
+.nav-link:hover {
+  color: #3ed1fe !important;
+}
+
+/* 모달 */
+.loading-span {
+  animation: loading 1s linear infinite;
+  display: inline-block;
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: blue;
+  border-radius: 50%;
+  margin: 0.2rem;
+}
+
+.loading-span:nth-child(1) {
+  background-color: rgb(254, 148, 130);
+}
+
+.loading-span:nth-child(2) {
+  background-color: powderblue;
+  animation-delay: 0.2s;
+}
+
+.loading-span:nth-child(3) {
+  background-color: rgb(114, 255, 138);
+  animation-delay: 0.4s;
+}
+
+/* 슬릭 dots */
+
+.slick-dots {
+  bottom: 0.7rem !important;
+}
+
+.notification-img {
+  height: 45vh;
+}
+
+.sub-navi-item {
+  width: auto;
+}
+
+/* 서브 네비 아이콘 */
+.sub-navi-img {
+  max-width: 80px;
+  max-height: 80px;
+}
+
+/* 새가족 스크롤바 */
+.box::-webkit-scrollbar {
+  display: none;
+}
+
+.letter::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.35);
+  border-radius: 15px;
+}
+
+.grace-thumbnail {
+  max-width: 9rem;
+}
+
+.ql-toolbar.ql-snow,
+.ql-container.ql-snow {
+  border-radius: 0.25rem;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  border-color: #e5e7eb !important;
+}
+
+.ql-container.ql-snow {
+  margin-top: 0.8rem;
+  height: 50vh;
+}
+
+.worship-card img {
+  flex: 2;
+}
+.worship-card .center {
+  flex: 6;
+}
+.worship-card .end {
+  flex: 2;
+}
+
+.backgroud-white {
+  height: 50vh;
+  border-radius: 90px 90px 0% 0%;
+  bottom: -1200vh;
+  animation: slide-up-up 200ms linear forwards;
+}
+
+@media (max-width: 640px) {
+  .desk-top {
+    display: none;
+  }
+
+  .full-screen {
+    width: 100%;
+    height: calc(100vh - 88px);
+  }
+
+  .worship-time {
+    max-width: 250px !important;
+  }
+
+  .notification a {
+    outline: none;
+  }
+
+  .notification-img {
+    height: 33vh !important;
+    border-radius: 0;
+  }
+
+  .sub-navi-img {
+    border-radius: 10px;
+    max-width: 50px;
+    max-height: 50px;
+  }
+}
+
+@media (min-width: 641px) {
+  .mobile {
+    display: none;
+  }
+}
+
+/* 모달애니메이션 */
+@keyframes loading {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes slide-up-up {
+  0% {
+    bottom: -120vh;
+  }
+  100% {
+    bottom: 0vh;
+  }
+}

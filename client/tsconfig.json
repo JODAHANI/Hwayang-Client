@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "es5" /* 컴파일할 ECMAScript 버전: 'ES3'(기본), 'ES2015', 'ES2016'... */,
+    "lib": [
+      /* 컴파일 과정에서 사용될 라이브러리 파일 */ "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "baseUrl": "./src" /* 절대경로 모듈이 아닌, 모듈이 위치한 기준 디렉토리 */,
+    "typeRoots": [
+      /* 타입정의를 포함할 폴더목록, '/node_modules/@types/' 는 기본 포함됨 */
+      "./node_modules/@types/",
+      "./src/types/"
+    ],
+    "allowJs": true /* Javascript 파일 컴파일 허용 */,
+    "allowSyntheticDefaultImports": true /* default export가 없는 모듈에서 기본호출 허용 */,
+    "declaration": true /* 'type.d.ts' 파일 생성설정 */,
+    "skipLibCheck": true /* 정의파일 타입 확인 건너뛸지 여부 */,
+    "strict": false /* use-strict 엄격타입 활성화 여부 */,
+    "forceConsistentCasingInFileNames": true /* 같은 파일에 대한 일관되지 않은 케이스 참조 허용금지 여부 */,
+    "noEmit": true /* 결과 파일 emit 여부 */,
+    "esModuleInterop": true /* 모든 import의 namespace 생성을 통한 CommonJS 와 ES모듈 간 상호운용 여부 */,
+    "module": "ES6" /* 생성될 모듈 코드: 'none', 'commonjs', 'amd' ... */,
+    "moduleResolution": "node" /* 모듈 분석방법: 'node'(Node.js) or 'classic'(TS) */,
+    "isolatedModules": true /* 각 파일을 별도모듈로 변환 */,
+    "jsx": "preserve" /* JSX 코드생성 설정: 'react', 'react-native' ... */,
+    "outDir": "dist" /* 결과구조를 보낼 디렉토리 */
+  },
+  "include": [
+    /* include: 컴파일에 포함할 디렉토리/파일 경로 */ "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [/* exclude: 컴파일에 제외할 디렉토리/파일 경로 */ "node_modules"]
+}
