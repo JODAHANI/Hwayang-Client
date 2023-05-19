@@ -56,7 +56,7 @@ const PrayRequestDetail = (props) => {
     };
     setIsForm(false);
     setPray(null);
-    await dispatch(editPrays(body, prays));
+    await dispatch(editPrays(body));
     requestData();
   };
 
@@ -76,7 +76,7 @@ const PrayRequestDetail = (props) => {
       id,
     };
     await dispatch(deletePrays(body, prays));
-    props.history.push("/prayer-request");
+    props.history.replace("/pray-request");
   };
   if (isNull) return <NotFound />;
   if (pray == null) return <LoadingSpinner />;

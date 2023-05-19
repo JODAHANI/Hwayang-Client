@@ -20,6 +20,8 @@ export const COMBINE_PRAYS = "combine_prays";
 export const ADD_PRAYS = "add_prays";
 export const DELETE_PRAY = "delete_pray";
 export const EDIT_PRAY = "edit_pray";
+export const WRITE_PRAY = "WRITE_pray";
+
 export const GET_NOTICE = "get_notice";
 
 export const GET_NEW_FAMILY = "get_new_family";

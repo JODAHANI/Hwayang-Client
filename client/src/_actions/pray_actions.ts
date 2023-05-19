@@ -6,6 +6,7 @@ import {
   DELETE_PRAY,
   EDIT_PRAY,
   COMBINE_PRAYS,
+  WRITE_PRAY,
 } from "./types";
 
 export const postPrays = async (body) => {
@@ -31,30 +32,50 @@ export const combinePrays = async (body) => {
   };
 };
 
-export const addPrays = async (prays, newPray) => {
+export const writeNewPrays = async (body) => {
   try {
-    prays.prayRequest.unshift(newPray);
+    const axiosRequest = await axios.post(
+      "/api/users/pray-request/write",
+      body
+    );
+    const { data } = axiosRequest;
     return {
-      type: ADD_PRAYS,
-      payload: prays,
+      type: WRITE_PRAY,
+      payload: data,
     };
   } catch (err) {
-    return { success: false };
+    return {
+      type: WRITE_PRAY,
+      payload: {
+        success: false,
+      },
+    };
   }
 };
 
-export const editPrays = async (body, prays) => {
+export const addPray = async (data) => {
+  try {
+    return {
+      type: ADD_PRAYS,
+      payload: data,
+    };
+  } catch (err) {
+    return {
+      type: ADD_PRAYS,
+      payload: {
+        success: false,
+      },
+    };
+  }
+};
+
+export const editPrays = async (body) => {
   try {
     const axiosRequest = await axios.post("/api/users/edit/pray-request", body);
-    let data = axiosRequest.data;
-    prays.prays.prayRequest.forEach((item, idx) => {
-      if (item._id === data.pray._id) {
-        prays.prays.prayRequest[idx] = data.pray;
-      }
-    });
+    const { data } = axiosRequest;
     return {
       type: EDIT_PRAY,
-      payload: prays.prays,
+      payload: data,
     };
   } catch (err) {
     return { success: false };
@@ -67,14 +88,10 @@ export const deletePrays = async (body, prays) => {
       "/api/users/delete/pray-request",
       body
     );
-    let data = axiosRequest.data;
-    const filterArray = prays.prays.prayRequest.filter((item) => {
-      return item._id !== data.pray._id;
-    });
-    prays.prays.prayRequest = [...filterArray];
+    const { data } = axiosRequest;
     return {
       type: DELETE_PRAY,
-      payload: prays.prays,
+      payload: data,
     };
   } catch (err) {
     return { success: false };

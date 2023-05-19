@@ -4,8 +4,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import {
   postPrays,
-  addPrays,
+  addPray,
   combinePrays,
+  writeNewPrays,
 } from "../../../_actions/pray_actions";
 import LoadingSpinner from "../../layout/LoadingSpinner/LoadingSpinner";
 
@@ -40,13 +41,9 @@ const PrayRequest = (props) => {
       writer: user?.userData?.id,
       isSecret,
     };
-    const axiosRequest = await axios.post(
-      "/api/users/pray-request/write",
-      body
-    );
-    const data = axiosRequest.data;
-    if (data.success) {
-      dispatch(addPrays(prays, data.pray));
+    const axiosRequest = await writeNewPrays(body);
+    if (axiosRequest.payload.success) {
+      await dispatch(addPray(axiosRequest.payload));
     }
     setIsForm(false);
   };
@@ -65,7 +62,7 @@ const PrayRequest = (props) => {
           skip,
         };
         const dispatchRequest = await dispatch(postPrays(body));
-        const a = await dispatch(combinePrays(dispatchRequest.payload.pray));
+        await dispatch(combinePrays(dispatchRequest.payload.pray));
         setIsLoading((prev) => false);
       }
     },
@@ -80,8 +77,7 @@ const PrayRequest = (props) => {
     if (!prays) {
       setIsLoading((prev) => true);
       const dispatchRequest = await dispatch(postPrays(body));
-      const a = await dispatch(combinePrays(dispatchRequest.payload.pray));
-      console.log(a);
+      await dispatch(combinePrays(dispatchRequest.payload.pray));
       setIsLoading((prev) => false);
     } else {
       if (prays.isScroll) {
