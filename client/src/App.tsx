@@ -63,7 +63,7 @@ const App = () => {
         <Route
           exact
           path={worshipResult}
-          component={Auth(WorshipResult, null)}
+          component={Auth(WorshipResult, true)}
         />
         <Route
           exact
