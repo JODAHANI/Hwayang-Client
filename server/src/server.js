@@ -30,7 +30,7 @@ const PORT = process.env.PORT || 5000;
 
 app.get("/", (req, res) => {
   res.sendFile(
-    path.join("/Users/jodahan/Desktop/hwayang/server/client/buil/index.html")
+    path.join("/Users/jodahan/Desktop/hwayang/server/client/build/index.html")
   );
 });
 
