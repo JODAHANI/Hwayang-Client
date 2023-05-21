@@ -27,7 +27,7 @@ import {
   postPrayRequest,
 } from "../controllers/prayRequestController";
 
-import { GraceSharing, Logos, Notification, Pray } from "../models/Models";
+import { GraceSharing, Logos, Notification, Pray } from "../Models/Models";
 import { auth } from "../middleware/auth";
 import multer from "multer";
 

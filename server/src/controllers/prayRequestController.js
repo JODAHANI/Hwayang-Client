@@ -1,4 +1,4 @@
-import { Pray } from "../models/Models";
+import { Pray } from "../Models/Models";
 import User from "../Models/Users";
 
 export const getPrayRequest = async (req, res) => {

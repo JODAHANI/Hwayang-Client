@@ -1,4 +1,4 @@
-import { GraceSharing } from "../models/Models";
+import { GraceSharing } from "../Models/Models";
 import User from "../Models/Users";
 import { graceImageUpload } from "../routes/users";
 

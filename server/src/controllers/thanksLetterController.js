@@ -1,4 +1,4 @@
-import { Letter } from "../models/Models";
+import { Letter } from "../Models/Models";
 import User from "../Models/Users";
 
 export const postThanksLetter = async (req, res) => {
