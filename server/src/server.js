@@ -15,16 +15,22 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 app.use(
-  express.static(path.join("/Users/jodahan/Desktop/hwayang/client/build"))
+  express.static(
+    path.join("/Users/jodahan/Desktop/hwayang/server/client/build")
+  )
 );
-app.use("/uploads", express.static(path.join(__dirname, "./uploads")));
+app.use(
+  "/uploads",
+  express.static(path.join("/Users/jodahan/Desktop/hwayang/server/uploads"))
+);
+
 app.use("/api/users", userRouter);
 
 const PORT = process.env.PORT || 5000;
 
 app.get("/", (req, res) => {
   res.sendFile(
-    path.join("/Users/jodahan/Desktop/hwayang/client/build/index.html")
+    path.join("/Users/jodahan/Desktop/hwayang/server/client/buil/index.html")
   );
 });
 

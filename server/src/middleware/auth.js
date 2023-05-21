@@ -1,4 +1,4 @@
-import User from "../models/User";
+import User from "../Models/Users";
 
 export const auth = (req, res, next) => {
   let token = req.cookies.w_auth;

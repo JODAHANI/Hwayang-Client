@@ -1,5 +1,5 @@
 import { GraceSharing } from "../models/Models";
-import User from "../models/User";
+import User from "../Models/Users";
 import { graceImageUpload } from "../routes/users";
 
 export const postGraceSharing = async (req, res) => {

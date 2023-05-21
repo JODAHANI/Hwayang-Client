@@ -1,5 +1,5 @@
 import { Letter } from "../models/Models";
-import User from "../models/User";
+import User from "../Models/Users";
 
 export const postThanksLetter = async (req, res) => {
   const {

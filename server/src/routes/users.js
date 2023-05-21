@@ -1,5 +1,5 @@
 import express from "express";
-import User from "../models/User";
+import User from "../Models/Users";
 
 // 감사편지 컨트롤러
 import {
