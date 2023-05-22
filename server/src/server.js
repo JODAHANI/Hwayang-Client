@@ -15,6 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
     origin: [
+      "http://localhost:9000",
       "http://localhost:4000",
       "https://port-0-hwayang-7e6o2clhv5snco.sel4.cloudtype.app",
     ],
