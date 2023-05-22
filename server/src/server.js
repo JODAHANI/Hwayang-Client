@@ -16,14 +16,12 @@ app.use(
   cors({
     origin: [
       "http://localhost:9000",
-      "http://localhost:9000",
       "https://web-hwayang-client-7e6o2clhv5snco.sel4.cloudtype.app",
       "http://web-hwayang-client-7e6o2clhv5snco.sel4.cloudtype.app",
     ],
   })
 );
 
-app.use(express.static(path.join(__dirname, "..", "/client", "/build")));
 app.use("/uploads", express.static(path.join(__dirname, "..", "/uploads")));
 app.use("/api/users", userRouter);
 
