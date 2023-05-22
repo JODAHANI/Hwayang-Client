@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Routes } from "constants/routeItems";
+import { Routes, hwayangClientServer } from "constants/routeItems";
 import {
   GET_GRACE_SHARE,
   COMBINE_GRACE_SHARE,
@@ -10,7 +10,10 @@ const { graceSharing, graceSharingWrite, graceSharingDelete } = Routes;
 
 export const getGraceShare = async (body) => {
   try {
-    const axiosRequest = await axios.post(`/api/users/${graceSharing}`, body);
+    const axiosRequest = await axios.post(
+      `${hwayangClientServer}/${graceSharing}`,
+      body
+    );
     const { data } = axiosRequest;
     return {
       type: GET_GRACE_SHARE,
@@ -29,7 +32,7 @@ export const getGraceShare = async (body) => {
 export const addGraceSharing = async (body) => {
   try {
     const axiosRequest = await axios.post(
-      `/api/users/${graceSharingWrite}`,
+      `${hwayangClientServer}/${graceSharingWrite}`,
       body
     );
     const { data } = axiosRequest;

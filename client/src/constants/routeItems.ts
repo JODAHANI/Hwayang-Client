@@ -1,7 +1,9 @@
 // **라우트랑 텍스트는 구분해서 관리.
+export const hwayangClientServer =
+  "http://port-0-hwayang-client-server-7e6o2clhv5snco.sel4.cloudtype.app/api/users";
+
 export const Routes = {
   home: `/`,
-
   getWorship: `http://localhost:80/api/admin/worship-management`,
   postWorship: `http://localhost:80/api/admin/worship-apply`,
   worshipCancel: `http://localhost:80/api/admin/worship-result/cancel`,

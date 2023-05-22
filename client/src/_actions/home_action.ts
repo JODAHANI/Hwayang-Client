@@ -1,10 +1,11 @@
 import axios from "axios";
 import { GET_NOTICE, GET_NEW_FAMILYS, GET_THANKS_LETTERS } from "./types";
+import { hwayangClientServer } from "constants/routeItems";
 
 export const getNotification = async () => {
   try {
     const axiosRequest = await axios.get(
-      "/api/users/notification/get-notifications"
+      `${hwayangClientServer}/notification/get-notifications`
     );
     const { data } = axiosRequest;
     return {
@@ -24,7 +25,7 @@ export const getNotification = async () => {
 export const getNewFamilys = async (body) => {
   try {
     const axiosRequest = await axios.post(
-      "http://localhost:80/api/admin/new-family",
+      `http://localhost:80/api/admin/new-family`,
       body
     );
     const { data } = axiosRequest;
@@ -44,7 +45,10 @@ export const getNewFamilys = async (body) => {
 
 export const getThanksLetters = async (body) => {
   try {
-    const axiosRequest = await axios.post("/api/users/thanks-letter", body);
+    const axiosRequest = await axios.post(
+      `${hwayangClientServer}/thanks-letter`,
+      body
+    );
     const { data } = axiosRequest;
     return {
       type: GET_THANKS_LETTERS,

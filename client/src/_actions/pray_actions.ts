@@ -8,10 +8,14 @@ import {
   COMBINE_PRAYS,
   WRITE_PRAY,
 } from "./types";
+import { hwayangClientServer } from "constants/routeItems";
 
 export const postPrays = async (body) => {
   try {
-    const request = await axios.post("/api/users/prays-request", body);
+    const request = await axios.post(
+      `${hwayangClientServer}/prays-request`,
+      body
+    );
     const { data } = request;
     return {
       type: POST_PRAYS,
@@ -35,7 +39,7 @@ export const combinePrays = async (body) => {
 export const writeNewPrays = async (body) => {
   try {
     const axiosRequest = await axios.post(
-      "/api/users/pray-request/write",
+      `${hwayangClientServer}/pray-request/write`,
       body
     );
     const { data } = axiosRequest;
@@ -71,7 +75,10 @@ export const addPray = async (data) => {
 
 export const editPrays = async (body) => {
   try {
-    const axiosRequest = await axios.post("/api/users/edit/pray-request", body);
+    const axiosRequest = await axios.post(
+      `${hwayangClientServer}/edit/pray-request`,
+      body
+    );
     const { data } = axiosRequest;
     return {
       type: EDIT_PRAY,
@@ -85,7 +92,7 @@ export const editPrays = async (body) => {
 export const deletePrays = async (body, prays) => {
   try {
     const axiosRequest = await axios.post(
-      "/api/users/delete/pray-request",
+      `${hwayangClientServer}/delete/pray-request`,
       body
     );
     const { data } = axiosRequest;

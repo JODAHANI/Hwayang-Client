@@ -10,12 +10,12 @@ import {
   GET_USER_DATA,
 } from "./types";
 
-import { Routes } from "constants/routeItems";
+import { Routes, hwayangClientServer } from "constants/routeItems";
 
 const { worshipCancel } = Routes;
 
 export const loginUser = async (dataTosubmit: object) => {
-  let request = await axios.post("/api/users/login", dataTosubmit);
+  let request = await axios.post(`${hwayangClientServer}/login`, dataTosubmit);
   const data = request.data;
   return {
     type: LOGIN_USER,
@@ -24,7 +24,10 @@ export const loginUser = async (dataTosubmit: object) => {
 };
 
 export const registerUser = async (dataTosubmit) => {
-  let request = await axios.post("/api/users/register", dataTosubmit);
+  let request = await axios.post(
+    `${hwayangClientServer}/register`,
+    dataTosubmit
+  );
   const data = request.data;
   return {
     type: REGISTER_USER,
@@ -32,7 +35,7 @@ export const registerUser = async (dataTosubmit) => {
   };
 };
 export const auth = async () => {
-  const request = await axios.get("/api/users/auth");
+  const request = await axios.get(`${hwayangClientServer}/auth`);
   const data = request.data;
   return {
     type: AUTH_USER,
@@ -41,7 +44,7 @@ export const auth = async () => {
 };
 
 export const userLogout = async () => {
-  const request = await axios.get("/api/users/logout");
+  const request = await axios.get(`${hwayangClientServer}/logout`);
   const data = request.data;
   return {
     type: LOGOUT,
@@ -50,7 +53,7 @@ export const userLogout = async () => {
 };
 
 export const getProclamation = async () => {
-  const request = await axios.get("/api/users/proclamation");
+  const request = await axios.get(`${hwayangClientServer}/proclamation`);
   const data = request.data;
   return {
     type: GET_LOGOS,
@@ -60,7 +63,10 @@ export const getProclamation = async () => {
 
 export const getUserWorshipData = async (body) => {
   try {
-    const request = await axios.post("/api/users/user/worship-data", body);
+    const request = await axios.post(
+      `${hwayangClientServer}/user/worship-data`,
+      body
+    );
     const data = request.data;
     return {
       type: USER_WORSHIP_DATA,
@@ -76,7 +82,7 @@ export const getUserWorshipData = async (body) => {
 
 export const getUserData = async (body) => {
   try {
-    const request = await axios.post("/api/users/user-data", body);
+    const request = await axios.post(`${hwayangClientServer}/user-data`, body);
     const data = request.data;
     return {
       type: GET_USER_DATA,

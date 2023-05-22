@@ -7,10 +7,14 @@ import {
   EDIT_LETTERS,
   DELETE_LETTERS,
 } from "./types";
+import { hwayangClientServer } from "constants/routeItems";
 
 export const getThanksLetters = async (body) => {
   try {
-    const axiosRequest = await axios.post("/api/users/thanks-letters", body);
+    const axiosRequest = await axios.post(
+      `${hwayangClientServer}/thanks-letters`,
+      body
+    );
     const { data } = axiosRequest;
     return {
       type: GET_LETTERS,
@@ -29,7 +33,7 @@ export const getThanksLetters = async (body) => {
 export const writeLetters = async (body, letters) => {
   try {
     const axiosLetter = await axios.post(
-      "/api/users/thanks-letter/write",
+      `${hwayangClientServer}/thanks-letter/write`,
       body
     );
     const { data } = axiosLetter;
@@ -60,7 +64,7 @@ export const addLetters = async (body) => {
 export const editLetters = async (body) => {
   try {
     const axiosRequest = await axios.post(
-      "/api/users/thanks-letter/edit",
+      `${hwayangClientServer}/thanks-letter/edit`,
       body
     );
     const { data } = axiosRequest;
@@ -76,7 +80,7 @@ export const editLetters = async (body) => {
 export const deleteLetters = async (body) => {
   try {
     const axiosLetterDelete = await axios.post(
-      "/api/users/thanks-letter/delete",
+      `${hwayangClientServer}/thanks-letter/delete`,
       body
     );
     const data = axiosLetterDelete.data;
