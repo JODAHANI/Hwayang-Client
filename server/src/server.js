@@ -3,9 +3,8 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import "dotenv/config";
 import "./js/db";
-import path from "path";
-
 import userRouter from "./routes/users";
+import path from "path";
 
 const app = express();
 
@@ -22,24 +21,14 @@ app.use(
   })
 );
 
-app.use(
-  express.static(
-    path.join("/Users/jodahan/Desktop/hwayang/server/client/build")
-  )
-);
-app.use(
-  "/uploads",
-  express.static(path.join("/Users/jodahan/Desktop/hwayang/server/uploads"))
-);
-
+app.use(express.static(path.join(__dirname, "..", "/client", "/build")));
+app.use("/uploads", express.static(path.join(__dirname, "..", "/uploads")));
 app.use("/api/users", userRouter);
 
 const PORT = process.env.PORT || 5000;
 
 app.get("/", (req, res) => {
-  res.sendFile(
-    path.join("/Users/jodahan/Desktop/hwayang/server/client/build/index.html")
-  );
+  res.sendFile(path.join(__dirname, "..", "/client", "/build", "/index.html"));
 });
 
 app.listen(PORT, () => {
