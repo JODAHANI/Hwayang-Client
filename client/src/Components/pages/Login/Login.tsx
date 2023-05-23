@@ -66,6 +66,7 @@ const Login = (props: any): JSX.Element => {
             <form
               className="bg-white max-w-xs shadow-md rounded px-8 pt-8 pb-8 mb-4"
               onSubmit={formHandler}
+              method="POST"
             >
               <div className="mb-4">
                 <input

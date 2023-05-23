@@ -4,7 +4,8 @@ module.exports = function (app) {
   app.use(
     "/api",
     createProxyMiddleware({
-      target: "http://localhost:8080",
+      target:
+        "https://port-0-hwayang-client-server-7e6o2clhv5snco.sel4.cloudtype.app",
       changeOrigin: true,
     })
   );
