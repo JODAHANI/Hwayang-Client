@@ -1,9 +1,12 @@
 // **라우트랑 텍스트는 구분해서 관리.
 
 export const hwayangClientServer = "/api/users";
+
 export const hwayangImageUrl =
   "https://port-0-hwayang-client-server-7e6o2clhv5snco.sel4.cloudtype.app";
+
 export const hwayangAdminServer = "http://localhost:80";
+
 export const hwayangAdminApi = "http://localhost:80/api/admin";
 
 export const Routes = {

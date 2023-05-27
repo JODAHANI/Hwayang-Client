@@ -37,6 +37,7 @@ export const registerUser = async (dataTosubmit) => {
 export const auth = async () => {
   const request = await axios.get(`${hwayangClientServer}/auth`);
   const data = request.data;
+  console.log(data);
   return {
     type: AUTH_USER,
     payload: data,
