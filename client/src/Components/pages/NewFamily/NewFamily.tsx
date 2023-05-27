@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { getNewFamily, combineNewFamily } from "_actions/newFamily_actions";
 import LoadingSpinner from "Components/layout/LoadingSpinner/LoadingSpinner";
+import { hwayangAdminServer } from "constants/routeItems";
 
 let skip = 0;
 const limit = 5;
@@ -114,7 +115,7 @@ const Card = ({
       >
         <img
           className="block w-full rounded-lg"
-          src={`http://localhost:80/${imagePath}`}
+          src={`${hwayangAdminServer}/${imagePath}`}
           alt="new family"
         />
         <div className="py-1">

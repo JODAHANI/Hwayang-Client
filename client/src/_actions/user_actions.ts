@@ -12,11 +12,12 @@ import {
 
 import { Routes, hwayangClientServer } from "constants/routeItems";
 
-axios.defaults.withCredentials = true;
 const { worshipCancel } = Routes;
 
 export const loginUser = async (dataTosubmit: object) => {
-  let request = await axios.post(`${hwayangClientServer}/login`, dataTosubmit);
+  let request = await axios.post(`${hwayangClientServer}/login`, dataTosubmit, {
+    withCredentials: true,
+  });
   const data = request.data;
   return {
     type: LOGIN_USER,
@@ -36,7 +37,9 @@ export const registerUser = async (dataTosubmit) => {
   };
 };
 export const auth = async () => {
-  const request = await axios.get(`${hwayangClientServer}/auth`);
+  const request = await axios.get(`${hwayangClientServer}/auth`, {
+    withCredentials: true,
+  });
   const data = request.data;
   return {
     type: AUTH_USER,
@@ -45,7 +48,9 @@ export const auth = async () => {
 };
 
 export const userLogout = async () => {
-  const request = await axios.get(`${hwayangClientServer}/logout`);
+  const request = await axios.get(`${hwayangClientServer}/logout`, {
+    withCredentials: true,
+  });
   const data = request.data;
   return {
     type: LOGOUT,
