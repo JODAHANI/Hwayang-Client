@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import { deletePrays, editPrays } from "../../../../_actions/pray_actions";
 import NotFound from "Components/layout/NotFound/NotFound";
 import LoadingSpinner from "../../../layout/LoadingSpinner/LoadingSpinner";
+import { hwayangClientServer } from "constants/routeItems";
 
 const inputLabelCss =
   "p-3 rounded-md bg-[#f0f0f0] w-full border border-[#ccc] focus:bg-[#fff] focus:outline-cyan-500 max-sm:p-1";
@@ -29,7 +30,10 @@ const PrayRequestDetail = (props) => {
       id,
     };
 
-    const axiosRequest = await axios.post("/api/users/pray-request", body);
+    const axiosRequest = await axios.post(
+      `${hwayangClientServer}/pray-request`,
+      body
+    );
     const { data } = axiosRequest;
     if (data.success) {
       setPray(data.pray);
