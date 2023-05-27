@@ -15,7 +15,7 @@ import { Routes, hwayangClientServer } from "constants/routeItems";
 const { worshipCancel } = Routes;
 
 export const loginUser = async (dataTosubmit: object) => {
-  let request = await axios.post(`${hwayangClientServer}/login`, dataTosubmit);
+  let request = await axios.post(`/api/users/login`, dataTosubmit);
   const data = request.data;
   return {
     type: LOGIN_USER,
@@ -35,8 +35,9 @@ export const registerUser = async (dataTosubmit) => {
   };
 };
 export const auth = async () => {
-  const request = await axios.get(`${hwayangClientServer}/auth`);
+  const request = await axios.get(`/api/users/auth`);
   const data = request.data;
+  console.log(data);
   return {
     type: AUTH_USER,
     payload: data,
@@ -55,7 +56,6 @@ export const userLogout = async () => {
 export const getProclamation = async () => {
   const request = await axios.get(`${hwayangClientServer}/proclamation`);
   const data = request.data;
-  console.log(data);
   return {
     type: GET_LOGOS,
     payload: data,

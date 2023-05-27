@@ -12,7 +12,6 @@ const Auth: Function = (
   function AuthenticationCheck(props: any): JSX.Element {
     let user = useSelector((state: ReduxStateType) => state?.user);
     const dispatch: any = useDispatch();
-
     useEffect(() => {
       dispatch(auth()).then((res) => {
         if (!res.payload.isAuth) {

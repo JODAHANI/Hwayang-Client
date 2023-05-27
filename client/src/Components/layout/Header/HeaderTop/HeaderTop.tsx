@@ -121,7 +121,7 @@ const DeskTopView = ({ user }) => {
       }
     });
   };
-  if (user.userData && user.userData.isAuth) {
+  if (user?.userData && user?.userData?.isAuth) {
     return (
       <>
         <div className="text-[#333] font-bold">
