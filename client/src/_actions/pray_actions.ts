@@ -17,6 +17,7 @@ export const postPrays = async (body) => {
       body
     );
     const { data } = request;
+    console.log(data);
     return {
       type: POST_PRAYS,
       payload: data,

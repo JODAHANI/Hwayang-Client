@@ -1,10 +1,11 @@
 import axios from "axios";
 import { GET_NEW_FAMILY, COMBINE_NEW_FAMILYS } from "./types";
+import { hwayangAdminApi } from "constants/routeItems";
 
 export const getNewFamily = async (body) => {
   try {
     const axiosRequest = await axios.post(
-      "http://localhost:80/api/admin/new-family",
+      `${hwayangAdminApi}/new-family`,
       body
     );
     const { data } = axiosRequest;

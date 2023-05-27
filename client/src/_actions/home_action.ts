@@ -1,6 +1,6 @@
 import axios from "axios";
 import { GET_NOTICE, GET_NEW_FAMILYS, GET_THANKS_LETTERS } from "./types";
-import { hwayangClientServer } from "constants/routeItems";
+import { hwayangAdminApi, hwayangClientServer } from "constants/routeItems";
 
 export const getNotification = async () => {
   try {
@@ -25,7 +25,7 @@ export const getNotification = async () => {
 export const getNewFamilys = async (body) => {
   try {
     const axiosRequest = await axios.post(
-      `http://localhost:80/api/admin/new-family`,
+      `${hwayangAdminApi}/new-family`,
       body
     );
     const { data } = axiosRequest;

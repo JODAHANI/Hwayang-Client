@@ -55,6 +55,7 @@ export const userLogout = async () => {
 export const getProclamation = async () => {
   const request = await axios.get(`${hwayangClientServer}/proclamation`);
   const data = request.data;
+  console.log(data);
   return {
     type: GET_LOGOS,
     payload: data,

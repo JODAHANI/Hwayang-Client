@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import LoadingSpinner from "Components/layout/LoadingSpinner/LoadingSpinner";
 import { cancelWorship, getUserWorshipData } from "_actions/user_actions";
 import { allGetWorship, subtractUser } from "_actions/worship_action";
+import { hwayangAdminServer } from "constants/routeItems";
 
 const WorshipResult = ({ user, history }) => {
   const dispatch: any = useDispatch();
@@ -87,7 +88,7 @@ const Card = ({ item, onShowModal }) => {
       <div className="worship-card h-auto flex my-3 max-lg:block">
         <img
           className="h-32 block rounded-md max-sm:m-auto max-lg:h-full m-auto"
-          src={`http://localhost:80/${item.imagePath}`}
+          src={`${hwayangAdminServer}/${item.imagePath}`}
           alt="설교자 사진"
         />
         <div className="center flex flex-col flex-start px-4 text-[#999] py-2 max-lg:my-5">

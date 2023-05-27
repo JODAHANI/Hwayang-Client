@@ -2,6 +2,7 @@ import Slider from "react-slick";
 import { Link } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { hwayangAdminServer } from "constants/routeItems";
 
 var settings = {
   dots: true,
@@ -32,7 +33,7 @@ const Notification = ({ notification }) => {
               >
                 <img
                   className="notification-img block w-full object-cover rounded"
-                  src={`http://localhost:80/${item.imagePath}`}
+                  src={`${hwayangAdminServer}/${item.imagePath}`}
                   alt="공지이미지"
                 />
               </Link>

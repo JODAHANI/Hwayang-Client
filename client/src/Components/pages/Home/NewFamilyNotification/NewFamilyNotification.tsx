@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Routes } from "../../../../constants/routeItems";
+import { Routes, hwayangAdminServer } from "../../../../constants/routeItems";
 
 const { newFamily } = Routes;
 
@@ -33,7 +33,7 @@ const Card = ({ item }) => {
       <Link to={newFamily} className="liink block w-72 max-sm:w-52">
         <img
           className="block w-full rounded-lg"
-          src={`http://localhost:80/${item.imagePath}`}
+          src={`${hwayangAdminServer}/${item.imagePath}`}
           alt="new family"
         />
         <div className="py-1">

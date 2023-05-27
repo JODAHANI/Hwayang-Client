@@ -1,7 +1,7 @@
 import { deleteGraceSharing } from "_actions/graceShare_action";
 import React from "react";
 import { useDispatch } from "react-redux";
-import { Routes } from "constants/routeItems";
+import { Routes, hwayangImageUrl } from "constants/routeItems";
 const { graceSharing } = Routes;
 
 const GraceSharingDetail = (props): JSX.Element => {
@@ -27,7 +27,7 @@ const GraceSharingDetail = (props): JSX.Element => {
       <figure className="rounded-xl py-12 px-8 m-auto mt-10 max-w-screen-md w-5/6 shadow-lg border-2">
         <img
           className="rounded block m-auto"
-          src={`http://localhost:8080/${item.imagePath}`}
+          src={`${hwayangImageUrl}/${item.imagePath}`}
           alt="공지이미지"
         />
         <p

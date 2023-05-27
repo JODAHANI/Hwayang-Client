@@ -4,7 +4,7 @@ import { allGetWorship, applyWorship } from "_actions/worship_action";
 
 import LoadingSpinner from "Components/layout/LoadingSpinner/LoadingSpinner";
 import { getUserWorshipData } from "_actions/user_actions";
-import { Routes } from "constants/routeItems";
+import { Routes, hwayangAdminServer } from "constants/routeItems";
 import moment from "moment";
 import "moment/locale/ko";
 
@@ -162,7 +162,7 @@ const Card = ({ item, onShowModal, userWorship }) => {
       <div className="worship-card h-auto flex my-3 max-lg:block ">
         <img
           className="h-32 block rounded-md max-sm:m-auto max-lg:h-full m-auto"
-          src={`http://localhost:80/${item.imagePath}`}
+          src={`${hwayangAdminServer}/${item.imagePath}`}
           alt="설교자 사진"
         />
         <div className="center flex flex-col flex-start px-4 text-[#999] py-2 max-lg:my-4">

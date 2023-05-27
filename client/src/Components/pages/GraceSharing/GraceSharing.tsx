@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { Routes } from "constants/routeItems";
+import { Routes, hwayangImageUrl } from "constants/routeItems";
 import {
   combineGraceSharing,
   getGraceShare,
@@ -112,7 +112,7 @@ const Card = ({ item }) => {
         <div className="flex-1">
           <img
             className="grace-thumbnail rounded-md h-20"
-            src={`http://localhost:8080/${item.imagePath}`}
+            src={`${hwayangImageUrl}/${item.imagePath}`}
           ></img>
         </div>
 
