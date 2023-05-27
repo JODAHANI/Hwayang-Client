@@ -118,6 +118,7 @@ userRouter.get("/logout", auth, async (req, res) => {
     { token: "" },
     { new: true }
   );
+  res.clearCookie("w_auth");
   if (!logoutUser) return res.json({ success: false, err });
   return res.json({ success: true });
 });
