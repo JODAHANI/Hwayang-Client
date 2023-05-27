@@ -29,7 +29,8 @@
   "include": [
     /* include: 컴파일에 포함할 디렉토리/파일 경로 */ "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "src/setupProxy.js"
   ],
   "exclude": [/* exclude: 컴파일에 제외할 디렉토리/파일 경로 */ "node_modules"]
 }
