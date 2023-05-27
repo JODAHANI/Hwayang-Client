@@ -5,7 +5,7 @@ module.exports = function (app) {
     "/api",
     createProxyMiddleware({
       target:
-        "https://port-0-hwayang-client-server-7e6o2clhv5snco.sel4.cloudtype.app/",
+        "https://port-0-hwayang-client-server-7e6o2clhv5snco.sel4.cloudtype.app",
       changeOrigin: true,
     })
   );
