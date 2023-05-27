@@ -32,7 +32,6 @@ import { auth } from "../middleware/auth";
 import multer from "multer";
 
 const userRouter = express.Router();
-
 const graceStorage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, `uploads/users/graceImage/`);
@@ -55,6 +54,7 @@ userRouter.get("/auth", auth, (req, res) => {
   });
 });
 
+// 로그인
 userRouter.post("/login", async (req, res) => {
   const {
     body: { account, password },
@@ -82,7 +82,9 @@ userRouter.post("/login", async (req, res) => {
       message: "로그인 실패.",
     });
   }
-  return res.cookie("w_auth", user.token).status(200).json({
+  res.cookie("w_auth", user.token);
+
+  return res.status(200).json({
     loginSuccess: true,
     userId: user._id,
     userName: user.name,

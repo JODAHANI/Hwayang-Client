@@ -45,8 +45,9 @@ export const auth = async () => {
 };
 
 export const userLogout = async () => {
-  const request = await axios.get(`${hwayangClientServer}/logout`);
+  const request = await axios.get(`/api/users/logout`);
   const data = request.data;
+  console.log(data);
   return {
     type: LOGOUT,
     payload: data,
