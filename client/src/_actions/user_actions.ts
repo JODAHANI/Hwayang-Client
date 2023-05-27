@@ -15,7 +15,7 @@ import { Routes, hwayangClientServer } from "constants/routeItems";
 const { worshipCancel } = Routes;
 
 export const loginUser = async (dataTosubmit: object) => {
-  let request = await axios.post(`/api/users/login`, dataTosubmit);
+  let request = await axios.post(`${hwayangClientServer}/login`, dataTosubmit);
   const data = request.data;
   return {
     type: LOGIN_USER,
