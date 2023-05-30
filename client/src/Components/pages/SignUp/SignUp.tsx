@@ -2,6 +2,7 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import { useState } from "react";
 import "../../../index.css";
+import { hwayangClientServer } from "constants/routeItems";
 
 const inputCss =
   "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline";
@@ -109,22 +110,24 @@ const SignUp = (props): JSX.Element => {
       return;
     }
 
-    axios.post("/api/users/sign-up", newUserData).then((res) => {
-      if (res.data.success) {
-        Swal.fire({
-          icon: "success",
-          title: "회원가입 완료.",
-          showConfirmButton: false,
-          timer: 1500,
-        });
-        setTimeout(() => {
-          props.history.push("/login");
-        }, 1500);
-      } else {
-        setsignUpErrorMessage(res.data.err);
-        setSignUpError(true);
-      }
-    });
+    axios
+      .post(`${hwayangClientServer}api/users/sign-up`, newUserData)
+      .then((res) => {
+        if (res.data.success) {
+          Swal.fire({
+            icon: "success",
+            title: "회원가입 완료.",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+          setTimeout(() => {
+            props.history.push("/login");
+          }, 1500);
+        } else {
+          setsignUpErrorMessage(res.data.err);
+          setSignUpError(true);
+        }
+      });
   };
 
   const formEnteredHandler = (event: any) => {

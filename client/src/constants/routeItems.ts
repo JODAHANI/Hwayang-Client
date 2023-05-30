@@ -4,7 +4,7 @@ export const hwayangClientServer = `https://port-0-hwayang-client-server-7e6o2cl
 
 export const hwayangImageUrl = `https://port-0-hwayang-client-server-7e6o2clhv5snco.sel4.cloudtype.app`;
 
-export const hwayangAdminServer = `http://localhost:80`;
+export const hwayangAdminServer = `http://localhost:9000`;
 
 export const hwayangAdminApi = `http://localhost:80/api/admin`;
 
