@@ -7,6 +7,8 @@ import { hwayangAdminServer } from "constants/routeItems";
 import moment from "moment";
 
 const btn = `w-10/12 my-10 flex justify-center px-5 items-center py-5 rounded-md text-[#fff] font-bold text-2xl max-sm:text-sm max-sm:py-2 absolute top-1/4 left-1/2 -translate-x-1/2 max-sm:top-2/4`;
+const descCSs =
+  "text-sm flex items-center italic font-semibold max-sm:text-xs max-sm:my-1 max-sm:not-italic max-sm:inline-block";
 
 const WorshipResult = ({ user, history }) => {
   const dispatch: any = useDispatch();
@@ -112,7 +114,7 @@ const Card = ({ item, onShowModal }) => {
                   - {item.speaker} -
                 </span>
               </div>
-              <div className="text-sm flex items-center italic font-semibold max-sm:text-xs max-sm:block">
+              <div className={descCSs}>
                 <span>날짜 : </span>
                 <span className="mx-2 ml-1 text">{item.date}</span>
                 <div className="hidden max-sm:block"></div>
@@ -120,14 +122,14 @@ const Card = ({ item, onShowModal }) => {
                 <span className="mx-1">{item.time}분</span>
               </div>
               <div className="hidden max-sm:block max-sm:my-1"></div>
-              <div className="text-sm flex items-center italic font-semibold max-sm:text-xs max-sm:block ">
+              <div className={descCSs}>
                 <span>오픈 날짜 : </span>
                 <span className="mx-2 ml-1">{item.openDate}</span>
                 <div className="hidden max-sm:block"></div>
                 <span>오픈 시간: </span>
                 <span className="mx-1">{item.openTime}분</span>
               </div>
-              <div className="text-sm flex items-center italic font-semibold max-sm:text-xs max-sm:my-1">
+              <div className={descCSs}>
                 <span>신청인원 : </span>
                 <span className="mx-1">{item.parti.length}</span>
               </div>
@@ -181,7 +183,7 @@ const Modal = ({ item, offShowModal, user, dispatch }) => {
         {!page && (
           <div className="m-auto w-ful h-full px-5 ">
             <div className="flex justify-between">
-              <h3 className="text-3xl max-sm:text-sm text-[#00A36C] font-black">
+              <h3 className="text-3xl max-sm:text-xl text-[#00A36C] font-black">
                 - {item.title}
               </h3>
               <button
@@ -207,7 +209,7 @@ const Modal = ({ item, offShowModal, user, dispatch }) => {
         )}
         {page === 1 && (
           <div className="m-auto w-ful h-full px-5">
-            <h3 className="text-3xl max-sm:text-xl text-[#017d53] font-black">
+            <h3 className="text-3xl max-sm:text-xl text-[#00A36C] font-black">
               - 취소가 완료되었습니다 -
             </h3>
             <button
