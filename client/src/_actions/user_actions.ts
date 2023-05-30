@@ -27,7 +27,7 @@ export const loginUser = async (dataTosubmit: object) => {
 
 export const registerUser = async (dataTosubmit) => {
   let request = await axios.post(
-    `${hwayangClientServer}/register`,
+    `${hwayangClientServer}/sign-up`,
     dataTosubmit
   );
   const data = request.data;
