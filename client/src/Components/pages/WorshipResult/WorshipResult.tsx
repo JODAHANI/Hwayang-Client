@@ -53,7 +53,7 @@ const WorshipResult = ({ user, history }) => {
   };
 
   return (
-    <div className="full-screen">
+    <div className="">
       {showModal && (
         <Modal
           item={selectWorship}

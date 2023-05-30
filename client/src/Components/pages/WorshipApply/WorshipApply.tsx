@@ -163,14 +163,14 @@ const Card = ({ item, onShowModal, userWorship }) => {
   return (
     <>
       {!prevCheck && (
-        <li className="prays p-2 pl-5 my-4 shadow-md border-2 max-sm:text-xs w-full h-full relative max:sm:my-5 max-lg:px-2 max-lg:rounded-lg">
+        <li className="prays p-2 pl-5 my-4 shadow-md border-2 max-sm:text-xs w-full h-full relative max:sm:my-2 max-lg:px-2 max-lg:rounded-lg max-sm:py-0">
           <div className="worship-card h-auto flex my-3 max-lg:block ">
             <img
-              className="h-32 block rounded-md max-sm:m-auto max-lg:h-full m-auto"
+              className="h-32 block rounded-md max-sm:m-auto max-lg:h-full m-auto max-sm:w-full"
               src={`${hwayangAdminServer}/${item.imagePath}`}
               alt="설교자 사진"
             />
-            <div className="center flex flex-col flex-start px-4 text-[#999] py-2 max-lg:my-4">
+            <div className="center flex flex-col flex-start px-4 text-[#999] py-2 max-lg:my-4 max-sm:mt-3">
               <div className=" flex items-center text-lg ">
                 <span className="font-bold text-[#017d53] mx-2">
                   {item.title}
@@ -181,24 +181,29 @@ const Card = ({ item, onShowModal, userWorship }) => {
                   - {item.speaker} -
                 </span>
               </div>
-              <div className="text-sm flex items-center italic font-semibold">
+              <div className="text-sm flex items-center italic font-semibold max-sm:text-xs max-sm:block">
                 <span>날짜 : </span>
-                <span className="mx-2 ml-1">{item.date} /</span>
+                <span className="mx-2 ml-1">{item.date}</span>
+                <div className="hidden max-sm:block"></div>
                 <span> 시간: </span>
                 <span className="mx-1">{item.time}분</span>
               </div>
-              <div className="text-sm flex items-center italic font-semibold">
+              <div className="hidden max-sm:block max-sm:my-1"></div>
+              <div className="text-sm flex items-center italic font-semibold max-sm:text-xs max-sm:block ">
                 <span>오픈 날짜 : </span>
-                <span className="mx-2 ml-1">{item.openDate} /</span>
+                <span className="mx-2 ml-1">{item.openDate}</span>
+                <div className="hidden max-sm:block"></div>
                 <span>오픈 시간: </span>
                 <span className="mx-1">{item.openTime}분</span>
               </div>
-              <div className="text-sm flex items-center italic font-semibold">
+              <div className="text-sm flex items-center italic font-semibold max-sm:text-xs max-sm:my-1">
                 <span>신청인원 : </span>
                 <span className="mx-1">{item.parti.length}</span>
               </div>
             </div>
-            <div className="flex items-center mr-2 py-2">{button}</div>
+            <div className="flex items-center mr-2 py-2 max-sm:my-0">
+              {button}
+            </div>
           </div>
         </li>
       )}
