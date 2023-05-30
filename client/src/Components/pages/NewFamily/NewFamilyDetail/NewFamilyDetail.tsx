@@ -1,3 +1,4 @@
+import { hwayangAdminServer } from "constants/routeItems";
 import { useLocation } from "react-router-dom";
 
 const NewFamilyDetail = () => {
@@ -26,7 +27,7 @@ const NewFamilyDetail = () => {
             {name}
           </span>
         </div>
-        <img src={`http://localhost:80/${imagePath}`} alt="공지이미지" />
+        <img src={`${hwayangAdminServer}/${imagePath}`} alt="공지이미지" />
       </div>
       <div className="px-5">
         <h2 className="p-4 font-semibold  bg-[#B4E4FF] my-2 text-[#fff] max-sm:font-xs rounded-lg">
@@ -41,9 +42,3 @@ const NewFamilyDetail = () => {
 };
 
 export default NewFamilyDetail;
-{
-  /* <span className="text-xs text-[#222] font-medium px-1">이름:</span>
-          <span className="max-sm:text-sm text-[#0067a3] font-semibold px-1">
-            {name}
-          </span> */
-}

@@ -1,3 +1,4 @@
+import { hwayangAdminServer } from "constants/routeItems";
 import { useLocation } from "react-router-dom";
 
 interface LocationState {
@@ -24,7 +25,7 @@ const NotificationDetail = (): JSX.Element => {
         <h2 className="text-2xl py-3 px-8 mb-6 font-bold border-b-2 max-sm:text-lg max-sm:px-3 max-sm:py-1 text-[#222]">
           {title}
         </h2>
-        <img src={`http://localhost:80/${imagePath}`} alt="공지이미지" />
+        <img src={`${hwayangAdminServer}/${imagePath}`} alt="공지이미지" />
       </div>
       <div className="p-5">
         <div
