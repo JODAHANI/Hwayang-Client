@@ -5,9 +5,9 @@ export const hwayangClientServer = `https://port-0-hwayang-client-server-7e6o2cl
 
 export const hwayangImageUrl = `https://port-0-hwayang-client-server-7e6o2clhv5snco.sel4.cloudtype.app`;
 
-export const hwayangAdminServer = `https://port-0-admin-server-7e6o2clhv5snco.sel4.cloudtype.app/api/admin`;
+export const hwayangAdminServer = `https://port-0-admin-server-7e6o2clhv5snco.sel4.cloudtype.app`;
 
-export const hwayangAdminApi = `https://port-0-admin-server-7e6o2clhv5snco.sel4.cloudtype.app/api/admin/api/admin`;
+export const hwayangAdminApi = `https://port-0-admin-server-7e6o2clhv5snco.sel4.cloudtype.app/api/admin`;
 
 export const Routes = {
   home: `/`,
