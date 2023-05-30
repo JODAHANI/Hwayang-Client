@@ -3,7 +3,7 @@ import { getProclamation } from "../../../_actions/user_actions";
 import LoadingSpinner from "Components/layout/LoadingSpinner/LoadingSpinner";
 
 const h2Css =
-  "text-[#fff] font-extrabold p-4 absolute w-full text-xl max-sm:text-base animate-[waviy_1s_4]";
+  "text-[#fff] font-extrabold p-4 absolute w-full text-xl max-sm:text-base animate-bounce my-5";
 const Proclamation = () => {
   const [todayLogos, setTodayLogos] = useState("");
   const [todayparagraph, setTodayparagraph] = useState("");
