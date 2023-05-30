@@ -1,3 +1,4 @@
+import { hwayangImageUrl } from "constants/routeItems";
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -27,7 +28,7 @@ const Card = ({ grace }) => {
         <div className="flex-1">
           <img
             className="grace-thumbnail rounded-md h-20"
-            src={`http://localhost:8080/${grace.imagePath}`}
+            src={`${hwayangImageUrl}/${grace.imagePath}`}
           ></img>
         </div>
 
