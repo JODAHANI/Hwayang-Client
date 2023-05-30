@@ -123,7 +123,7 @@ const Card = ({ item, onShowModal, userWorship }) => {
       <button
         type="button"
         disabled
-        className="block px-4 text-[#fff] bg-[#ffa500] font-extrabold rounded-md max:sm:py-2 py-2 text-sm max-lg:w-full"
+        className="block px-4 text-[#fff] bg-[#ffa500] font-extrabold rounded-md max:sm:py-2 py-2 text-sm max-lg:w-full max-sm:text-sm max-sm:py-2"
       >
         조금만 더 기다려주세요
       </button>
@@ -133,7 +133,7 @@ const Card = ({ item, onShowModal, userWorship }) => {
       <button
         type="button"
         disabled
-        className="block px-4 text-[#fff] bg-[#f5c2a1] font-bold rounded-md max:sm:py-2 py-2 max-lg:w-full"
+        className="block px-4 text-[#fff] bg-[#f5c2a1] font-bold rounded-md max:sm:py-2 py-2 max-lg:w-full max-sm:text-sm max-sm:py-2"
       >
         신청완료
       </button>
@@ -143,7 +143,7 @@ const Card = ({ item, onShowModal, userWorship }) => {
       <button
         type="button"
         disabled
-        className="block px-4 text-[#fff] bg-[#888] font-bold rounded-md max:sm:py-2 py-2 max-lg:w-full"
+        className="block px-4 text-[#fff] bg-[#888] font-bold rounded-md max:sm:py-2 py-2 max-lg:w-full max-sm:text-sm max-sm:py-2"
       >
         신청마감
       </button>
@@ -153,7 +153,7 @@ const Card = ({ item, onShowModal, userWorship }) => {
       <button
         type="button"
         onClick={() => onShowModal(item)}
-        className="block px-4 text-[#fff] bg-[#3ed1fe] font-bold rounded-md max:sm:py-2 py-2 max-lg:w-full"
+        className="block px-4 text-[#fff] bg-[#3ed1fe] font-bold rounded-md max:sm:py-2 py-2 max-lg:w-full max-sm:text-sm max-sm:py-2"
       >
         신청하기
       </button>
@@ -243,7 +243,7 @@ const Modal = ({ item, offShowModal, user, dispatch, history }) => {
     <div
       className={`backgroud-black w-full h-screen fixed bg-black bg-opacity-40 -top-0 z-40 animate-fadeInIn`}
     >
-      <div className="backgroud-white absolute m-auto w-full max-w-5xl left-1/2 bg-[#fff] -translate-x-1/2 px-10 py-20 max-sm:px-3 max-sm:py-5">
+      <div className="backgroud-white absolute m-auto w-full max-w-5xl left-1/2 bg-[#fff] -translate-x-1/2 px-10 py-20 max-sm:px-5 max-sm:pt-20">
         {!page && (
           <div className="m-auto w-ful h-full px-5 ">
             <div className="flex justify-between">
@@ -264,7 +264,7 @@ const Modal = ({ item, offShowModal, user, dispatch, history }) => {
             <button
               type="button"
               disabled={isPush}
-              className="w-full my-10 flex justify-center px-5 items-center py-5 rounded-md bg-[#3ed1fe] text-[#fff] font-bold text-2xl"
+              className="w-10/12 my-10 flex justify-center px-5 items-center py-5 rounded-md bg-[#3ed1fe] text-[#fff] font-bold text-2xl max-sm:text-sm max-sm:py-2 absolute top-1/4"
               onClick={() => nextPageHandler(item)}
             >
               신청하기
@@ -277,7 +277,7 @@ const Modal = ({ item, offShowModal, user, dispatch, history }) => {
               - 신청이 완료되었습니다.
             </h3>
             <button
-              className="w-full my-10 flex justify-center px-5 items-center py-5 rounded-md bg-[#3ed1fe] text-[#fff] font-bold text-3xl"
+              className="w-10/12 my-10 flex justify-center px-5 items-center py-5 rounded-md bg-[#3ed1fe] text-[#fff] font-bold text-2xl max-sm:text-sm max-sm:py-2 absolute top-1/4"
               onClick={resultPageHandler}
             >
               결과확인
@@ -293,7 +293,7 @@ const Modal = ({ item, offShowModal, user, dispatch, history }) => {
               {errorMessage}...
             </h4>
             <button
-              className="w-full my-10 flex justify-center px-5 items-center py-5 rounded-md bg-[#3ed1fe] text-[#fff] font-bold text-3xl"
+              className="w-10/12 my-10 flex justify-center px-5 items-center py-5 rounded-md bg-[#3ed1fe] text-[#fff] font-bold text-2xl max-sm:text-sm max-sm:py-2 absolute top-1/4"
               onClick={hideModalHandler}
             >
               닫기
