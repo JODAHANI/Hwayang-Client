@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const MyThanksLetters = ({ item }) => {
   return (
-    <div className="my-20 max-sm:my-10">
+    <div className="my-10 max-sm:my-10">
       <h2 className="font-semibold mb-10">💌 감사편지</h2>
       <ul className="flex flex-wrap justify-center">
         {item.map((letter) => (

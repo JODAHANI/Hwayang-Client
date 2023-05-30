@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const MyPrays = ({ item }) => {
   return (
-    <div className="mt-10 max-sm:my-10">
+    <div className="my-10 max-sm:my-10">
       <h2 className="font-semibold mb-10">🙏🏻 기도요청</h2>
       <ul>
         {item.map((pray) => (

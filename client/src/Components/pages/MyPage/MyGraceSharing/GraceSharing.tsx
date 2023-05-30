@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const MyGraceSharing = ({ item }) => {
   return (
-    <div className="my-20 max-sm:my-10">
+    <div className="mt-5 mb-10 max-sm:my-10">
       <h2 className="font-semibold mb-10">🔥 은혜공유</h2>
       <ul>
         {item.map((grace) => (
