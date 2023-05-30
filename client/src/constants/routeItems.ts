@@ -6,18 +6,18 @@ export const hwayangImageUrl = `https://port-0-hwayang-client-server-7e6o2clhv5s
 
 export const hwayangAdminServer = `http://localhost:9000`;
 
-export const hwayangAdminApi = `http://localhost:80/api/admin`;
+export const hwayangAdminApi = `http://localhost:9000/api/admin`;
 
 export const Routes = {
   home: `/`,
-  getWorship: `http://localhost:80/api/admin/worship-management`,
-  postWorship: `http://localhost:80/api/admin/worship-apply`,
-  worshipCancel: `http://localhost:80/api/admin/worship-result/cancel`,
+  getWorship: `${hwayangAdminApi}/worship-management`,
+  postWorship: `${hwayangAdminApi}/worship-apply`,
+  worshipCancel: `${hwayangAdminApi}/worship-result/cancel`,
   worshipApply: `/worship-apply`,
   worshipResult: `/worship-result`,
   onlineWorship: `/online-worship`,
   worshipGuide: `/worship-guide`,
-  userSubtract: `http://localhost:80/api/admin/worship-result/subtract`,
+  userSubtract: `${hwayangAdminApi}/worship-result/subtract`,
 
   quietTime: `/quiet-time`,
   login: `/login`,
