@@ -2,7 +2,6 @@ import User from "../Models/Users";
 
 export const auth = (req, res, next) => {
   let token = req.cookies.w_auth;
-  console.log(req.cookies);
   User.analyzer(token, (err, user) => {
     if (user == null) {
       return res.json({

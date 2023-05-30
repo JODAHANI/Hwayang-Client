@@ -1,12 +1,13 @@
 // **라우트랑 텍스트는 구분해서 관리.
 
 export const hwayangClientServer = `https://port-0-hwayang-client-server-7e6o2clhv5snco.sel4.cloudtype.app/api/users`;
+// export const hwayangClientServer = `/api/users`;
 
 export const hwayangImageUrl = `https://port-0-hwayang-client-server-7e6o2clhv5snco.sel4.cloudtype.app`;
 
-export const hwayangAdminServer = `http://localhost:9000`;
+export const hwayangAdminServer = `https://port-0-admin-server-7e6o2clhv5snco.sel4.cloudtype.app/api/admin`;
 
-export const hwayangAdminApi = `http://localhost:9000/api/admin`;
+export const hwayangAdminApi = `https://port-0-admin-server-7e6o2clhv5snco.sel4.cloudtype.app/api/admin/api/admin`;
 
 export const Routes = {
   home: `/`,
