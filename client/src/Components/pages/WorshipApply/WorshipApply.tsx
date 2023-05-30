@@ -243,14 +243,18 @@ const Modal = ({ item, offShowModal, user, dispatch, history }) => {
     <div
       className={`backgroud-black w-full h-screen fixed bg-black bg-opacity-40 -top-0 z-40 animate-fadeInIn`}
     >
-      <div className="backgroud-white absolute m-auto w-full max-w-5xl left-1/2 bg-[#fff] -translate-x-1/2 px-10 py-20 ">
+      <div className="backgroud-white absolute m-auto w-full max-w-5xl left-1/2 bg-[#fff] -translate-x-1/2 px-10 py-20 max-sm:px-3 max-sm:py-5">
         {!page && (
           <div className="m-auto w-ful h-full px-5 ">
             <div className="flex justify-between">
               <h3 className="text-3xl max-sm:text-sm text-[#00A36C] font-black">
                 - {item.title}
               </h3>
-              <button type="button" className="text-3xl" onClick={offShowModal}>
+              <button
+                type="button"
+                className="text-3xl max-sm:text-sm"
+                onClick={offShowModal}
+              >
                 ❌
               </button>
             </div>

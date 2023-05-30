@@ -175,14 +175,18 @@ const Modal = ({ item, offShowModal, user, dispatch }) => {
     <div
       className={`backgroud-black w-full h-screen fixed bg-black bg-opacity-40 -top-0 z-40 animate-fadeInIn`}
     >
-      <div className="backgroud-white absolute m-auto w-full max-w-5xl left-1/2 bg-[#fff] -translate-x-1/2 px-10 py-20 ">
+      <div className="backgroud-white absolute m-auto w-full max-w-5xl left-1/2 bg-[#fff] -translate-x-1/2 px-10 py-20 max-sm:px-5 max-sm:pt-20">
         {!page && (
           <div className="m-auto w-ful h-full px-5 ">
             <div className="flex justify-between">
               <h3 className="text-3xl max-sm:text-sm text-[#00A36C] font-black">
                 - {item.title}
               </h3>
-              <button type="button" className="text-3xl" onClick={offShowModal}>
+              <button
+                type="button"
+                className="text-2xl max-sm:text-sm"
+                onClick={offShowModal}
+              >
                 ❌
               </button>
             </div>
@@ -192,7 +196,7 @@ const Modal = ({ item, offShowModal, user, dispatch }) => {
             <button
               type="button"
               disabled={isPush}
-              className="w-full my-10 flex justify-center px-5 items-center py-5 rounded-md bg-[#f5c2a1] text-[#fff] font-bold text-2xl"
+              className="w-full my-10 flex justify-center px-5 items-center py-5 rounded-md bg-[#f5c2a1] text-[#fff] font-bold text-2xl max-sm:text-sm max-sm:py-2"
               onClick={() => nextPageHandler(item)}
             >
               취소하기
@@ -205,7 +209,7 @@ const Modal = ({ item, offShowModal, user, dispatch }) => {
               - 취소가 완료되었습니다.
             </h3>
             <button
-              className="w-full my-10 flex justify-center px-5 items-center py-5 rounded-md bg-[#f5c2a1] text-[#fff] font-bold text-3xl"
+              className="w-full my-10 flex justify-center px-5 items-center py-5 rounded-md bg-[#f5c2a1] text-[#fff] font-bold text-3xl max-sm:text-sm max-sm:py-2"
               onClick={hideModalHandler}
             >
               닫기
@@ -221,7 +225,7 @@ const Modal = ({ item, offShowModal, user, dispatch }) => {
               {errorMessage}...
             </h4>
             <button
-              className="w-full my-10 flex justify-center px-5 items-center py-5 rounded-md bg-[#f5c2a1] text-[#fff] font-bold text-3xl"
+              className="w-full my-10 flex justify-center px-5 items-center py-5 rounded-md bg-[#f5c2a1] text-[#fff] font-bold text-3xl max-sm:text-sm max-sm:py-2"
               onClick={hideModalHandler}
             >
               닫기

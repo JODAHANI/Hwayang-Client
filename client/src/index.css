@@ -146,6 +146,9 @@ code {
 }
 
 @media (max-width: 640px) {
+  .backgroud-white {
+    height: 65vh;
+  }
   .desk-top {
     display: none;
   }
