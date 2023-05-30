@@ -170,7 +170,7 @@ const Card = ({ item, onShowModal, userWorship }) => {
               src={`${hwayangAdminServer}/${item.imagePath}`}
               alt="설교자 사진"
             />
-            <div className="center flex flex-col flex-start px-4 text-[#999] py-2 max-lg:my-4 max-sm:mt-3">
+            <div className="center flex flex-col flex-start px-4 text-[#999] py-2 max-lg:my-4 max-sm:block max-sm:my-0 max-sm:mt-2">
               <div className=" flex items-center text-lg ">
                 <span className="font-bold text-[#017d53] mx-2">
                   {item.title}
