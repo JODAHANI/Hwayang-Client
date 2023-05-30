@@ -9,6 +9,7 @@ import moment from "moment";
 import "moment/locale/ko";
 
 const { worshipResult } = Routes;
+const btn = `w-10/12 my-10 flex justify-center px-5 items-center py-5 rounded-md bg-[#3ed1fe] text-[#fff] font-bold text-2xl max-sm:text-sm max-sm:py-2 absolute top-1/4 left-1/2 -translate-x-1/2 max-sm:top-3/4`;
 
 const WorshipApply = ({ user, history }) => {
   const dispatch: any = useDispatch();
@@ -264,7 +265,7 @@ const Modal = ({ item, offShowModal, user, dispatch, history }) => {
             <button
               type="button"
               disabled={isPush}
-              className="w-10/12 my-10 flex justify-center px-5 items-center py-5 rounded-md bg-[#3ed1fe] text-[#fff] font-bold text-2xl max-sm:text-sm max-sm:py-2 absolute top-1/4 left-1/2 -translate-x-1/2"
+              className={btn}
               onClick={() => nextPageHandler(item)}
             >
               신청하기
@@ -276,10 +277,7 @@ const Modal = ({ item, offShowModal, user, dispatch, history }) => {
             <h3 className="text-3xl max-sm:text-sm text-[#017d53] font-black">
               - 신청이 완료되었습니다.
             </h3>
-            <button
-              className="w-10/12 my-10 flex justify-center px-5 items-center py-5 rounded-md bg-[#3ed1fe] text-[#fff] font-bold text-2xl max-sm:text-sm max-sm:py-2 absolute top-1/4 left-1/2 -translate-x-1/2"
-              onClick={resultPageHandler}
-            >
+            <button className={btn} onClick={resultPageHandler}>
               결과확인
             </button>
           </div>
@@ -292,10 +290,7 @@ const Modal = ({ item, offShowModal, user, dispatch, history }) => {
             <h4 className="text-xl max-sm:text-xs text-[#888] font-black pt-5 px-3">
               {errorMessage}...
             </h4>
-            <button
-              className="w-10/12 my-10 flex justify-center px-5 items-center py-5 rounded-md bg-[#3ed1fe] text-[#fff] font-bold text-2xl max-sm:text-sm max-sm:py-2 absolute top-1/4 left-1/2 -translate-x-1/2"
-              onClick={hideModalHandler}
-            >
+            <button className={btn} onClick={hideModalHandler}>
               닫기
             </button>
           </div>
