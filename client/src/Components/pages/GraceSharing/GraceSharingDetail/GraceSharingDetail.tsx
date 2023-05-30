@@ -24,7 +24,7 @@ const GraceSharingDetail = (props): JSX.Element => {
   };
   return (
     <div>
-      <figure className="rounded-xl py-12 px-8 m-auto mt-10 max-w-screen-md w-5/6 shadow-lg border-2">
+      <figure className="rounded-xl py-12 px-8 m-auto mt-10 max-w-screen-md w-5/6 shadow-lg border-2 max-sm:py-5 max-sm:px-5 ">
         <img
           className="rounded block m-auto"
           src={`${hwayangImageUrl}/${item.imagePath}`}
