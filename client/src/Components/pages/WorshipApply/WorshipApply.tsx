@@ -264,7 +264,7 @@ const Modal = ({ item, offShowModal, user, dispatch, history }) => {
             <button
               type="button"
               disabled={isPush}
-              className="w-10/12 my-10 flex justify-center px-5 items-center py-5 rounded-md bg-[#3ed1fe] text-[#fff] font-bold text-2xl max-sm:text-sm max-sm:py-2 absolute top-1/4"
+              className="w-10/12 my-10 flex justify-center px-5 items-center py-5 rounded-md bg-[#3ed1fe] text-[#fff] font-bold text-2xl max-sm:text-sm max-sm:py-2 absolute top-1/4 left-1/2 -translate-x-1/2"
               onClick={() => nextPageHandler(item)}
             >
               신청하기
@@ -277,7 +277,7 @@ const Modal = ({ item, offShowModal, user, dispatch, history }) => {
               - 신청이 완료되었습니다.
             </h3>
             <button
-              className="w-10/12 my-10 flex justify-center px-5 items-center py-5 rounded-md bg-[#3ed1fe] text-[#fff] font-bold text-2xl max-sm:text-sm max-sm:py-2 absolute top-1/4"
+              className="w-10/12 my-10 flex justify-center px-5 items-center py-5 rounded-md bg-[#3ed1fe] text-[#fff] font-bold text-2xl max-sm:text-sm max-sm:py-2 absolute top-1/4 left-1/2 -translate-x-1/2"
               onClick={resultPageHandler}
             >
               결과확인
@@ -293,7 +293,7 @@ const Modal = ({ item, offShowModal, user, dispatch, history }) => {
               {errorMessage}...
             </h4>
             <button
-              className="w-10/12 my-10 flex justify-center px-5 items-center py-5 rounded-md bg-[#3ed1fe] text-[#fff] font-bold text-2xl max-sm:text-sm max-sm:py-2 absolute top-1/4"
+              className="w-10/12 my-10 flex justify-center px-5 items-center py-5 rounded-md bg-[#3ed1fe] text-[#fff] font-bold text-2xl max-sm:text-sm max-sm:py-2 absolute top-1/4 left-1/2 -translate-x-1/2"
               onClick={hideModalHandler}
             >
               닫기
