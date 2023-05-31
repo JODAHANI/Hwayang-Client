@@ -124,7 +124,7 @@ const PrayRequest = (props) => {
           </div>
           <div className="mb-4 flex items-center">
             <label htmlFor="title" className="font-bold mr-2">
-              전교인 공유
+              🔒 비밀글 (사역자에게만 공개)
             </label>
             <input
               type="checkbox"
