@@ -11,7 +11,7 @@ import "moment/locale/ko";
 const { worshipResult } = Routes;
 const btn = `w-10/12 my-10 flex justify-center px-5 items-center py-5 rounded-md bg-[#3ed1fe] text-[#fff] font-bold text-2xl max-sm:text-sm max-sm:py-2 absolute top-1/4 left-1/2 -translate-x-1/2 max-sm:top-2/4`;
 const descCSs =
-  "text-sm flex items-center italic font-semibold max-sm:text-xs max-sm:my-1 max-sm:not-italic max-sm:inline-block";
+  "text-sm flex items-center italic font-semibold max-sm:text-xs max-sm:my-1 max-sm:not-italic max-sm:inline-block ";
 
 const WorshipApply = ({ user, history }) => {
   const dispatch: any = useDispatch();
@@ -179,12 +179,13 @@ const Card = ({ item, onShowModal, userWorship }) => {
                   {item.title}
                 </span>
               </div>
-              <div className=" flex items-center text-lg mb-2">
+              <div className=" flex items-center text-lg">
                 <span className="font-bold text-[#00A36C] ml-3">
-                  - {item.speaker} -
+                  : {item.speaker}
                 </span>
               </div>
-              <div className={descCSs}>
+              <div className="hidden max-sm:block bg-[#00A36C] h-px w-12/12 m-auto my-2 rounded-lg"></div>
+              <div className={`${descCSs}`}>
                 <span>날짜 : </span>
                 <span className="mx-2 ml-1">{item.date}</span>
                 <div className="hidden max-sm:block"></div>

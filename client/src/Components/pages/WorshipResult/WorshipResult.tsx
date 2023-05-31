@@ -111,9 +111,10 @@ const Card = ({ item, onShowModal }) => {
               </div>
               <div className=" flex items-center text-lg mb-2">
                 <span className="font-bold text-[#00A36C] ml-3">
-                  - {item.speaker} -
+                  : {item.speaker}
                 </span>
               </div>
+              <div className="hidden max-sm:block bg-[#00A36C] h-px w-12/12 m-auto my-2 rounded-lg"></div>
               <div className={descCSs}>
                 <span>날짜 : </span>
                 <span className="mx-2 ml-1 text">{item.date}</span>
