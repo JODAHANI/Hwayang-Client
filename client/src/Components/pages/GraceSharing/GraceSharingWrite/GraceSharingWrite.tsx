@@ -3,7 +3,7 @@ import React, { useRef, useState, useMemo } from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import { useDispatch } from "react-redux";
-import { Routes } from "constants/routeItems";
+import { Routes, hwayangClientServer } from "constants/routeItems";
 import { addGraceSharing } from "_actions/graceShare_action";
 const { graceImageSave, graceSharing } = Routes;
 
@@ -24,7 +24,6 @@ const ThanksLetterWrite = ({ user, history }): JSX.Element => {
   const [imageFileName, setImageFileName] = useState("사진을 선택해주세요.");
   const [errMessage, setErrMessage] = useState("");
   const [isError, setIsError] = useState(false);
-
   const titleHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     setTitle(event.target.value);
   };
@@ -49,25 +48,27 @@ const ThanksLetterWrite = ({ user, history }): JSX.Element => {
       header: { "content-type": "multipart/form-data" },
     };
 
-    axios.post(graceImageSave, formData, config).then(async (res) => {
-      if (res.data.success) {
-        const body = {
-          imagePath: res.data.imagePath,
-          writer: user?.userData?.id,
-          title,
-          contents,
-        };
-        const requestDispatch = await dispatch(addGraceSharing(body));
-        if (requestDispatch.payload.success) {
-          history.replace({
-            pathname: `${graceSharing}/${requestDispatch.payload.graceSharing._id}`,
-            state: {
-              item: requestDispatch.payload.graceSharing,
-            },
-          });
+    axios
+      .post(`${hwayangClientServer}/${graceImageSave}`, formData, config)
+      .then(async (res) => {
+        if (res.data.success) {
+          const body = {
+            imagePath: res.data.imagePath,
+            writer: user?.userData?.id,
+            title,
+            contents,
+          };
+          const requestDispatch = await dispatch(addGraceSharing(body));
+          if (requestDispatch.payload.success) {
+            history.replace({
+              pathname: `${graceSharing}/${requestDispatch.payload.graceSharing._id}`,
+              state: {
+                item: requestDispatch.payload.graceSharing,
+              },
+            });
+          }
         }
-      }
-    });
+      });
   };
 
   const formErrorCheck = () => {
